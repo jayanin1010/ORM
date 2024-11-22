@@ -30,51 +30,22 @@ Execute Django admin and create details for 10 books
         loan_term = models.IntegerField()
         disbursement_date = models.DateField()
 
+    class LoanAdmin(admin.ModelAdmin):
+    list_display=('loan_id','customer_name','loan_amount','interest_rate','loan_term','disbursement_date')
+
 
 # bank_loan_app/admin.py
     from django.contrib import admin
-    from .models import Loan
+    from .models import Loan,LoanAdmin
     
-    admin.site.register(Loan)
+    admin.site.register(Loan,LoanAdmin)
 
-
-# bank_loan_app/views.py
-    from django.shortcuts import render
-    from .models import Loan
-    
-    def loan_list(request):
-        loans = Loan.objects.all()
-        return render(request, 'loan_list.html', {'loans': loans})
-    
-    
-    <h1>Loan List</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Customer Name</th>
-                <th>Loan Amount</th>
-                <th>Interest Rate</th>
-                <th>Loan Term</th>
-                <th>Disbursement Date</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for loan in loans %}
-            <tr>
-                <td>{{ loan.customer_name }}</td>
-                <td>{{ loan.loan_amount }}</td>
-                <td>{{ loan.interest_rate }}%</td>
-                <td>{{ loan.loan_term }}</td>
-                <td>{{ loan.disbursement_date }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
 
 
 
 # OUTPUT
-Include the screenshot of your admin page.
+![image](https://github.com/user-attachments/assets/a9b67a33-2734-4500-a58d-745c9209e4d0)
+
 
 # RESULT
 Thus the program for creating a database using ORM hass been executed successfully
