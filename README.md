@@ -21,6 +21,7 @@ Execute Django admin and create details for 10 books
 
 # bank_loan_app/models.py
     from django.db import models
+    from django.contrib import admin
     
     class Loan(models.Model):
         loan_id = models.AutoField(primary_key=True)
