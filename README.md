@@ -46,11 +46,18 @@ Execute Django admin and create details for 10 books
     
     admin.site.register(Loan,LoanAdmin)
 
+# ER Diagram
+
+![Screenshot 2024-12-06 105104](https://github.com/user-attachments/assets/83fff316-ffff-49b9-b1eb-c85973527ae2)
+
 
 
 # OUTPUT
 
 ![Screenshot 2024-11-22 084017](https://github.com/user-attachments/assets/e659a870-3123-45f5-8092-eb2d19064ad1)
+
+![Screenshot 2024-12-06 112048](https://github.com/user-attachments/assets/dfba8e3f-8017-4ddf-9cb4-97b896e1d0c4)
+
 
 
 # RESULT
